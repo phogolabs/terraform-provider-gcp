@@ -8,7 +8,7 @@ import (
 func NewProvider() *schema.Provider {
 	return &schema.Provider{
 		ResourcesMap: map[string]*schema.Resource{
-			"google_app_engine_ssl_certificate": NewAppEngineSSLCertificate(),
+			"gcp_app_engine_ssl_certificate": NewAppEngineSSLCertificate(),
 		},
 	}
 }
