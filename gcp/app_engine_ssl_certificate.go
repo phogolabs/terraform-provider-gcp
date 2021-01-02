@@ -25,6 +25,8 @@ func NewAppEngineSSLCertificate() *schema.Resource {
 			return err
 		}
 
+		d.SetId(record.Id)
+
 		if err := d.Set("name", record.DisplayName); err != nil {
 			return err
 		}
@@ -100,7 +102,10 @@ func NewAppEngineSSLCertificate() *schema.Resource {
 			},
 		}
 
-		record, err := service.Apps.AuthorizedCertificates.Patch(appID, d.Id(), input).Do()
+		record, err := service.Apps.AuthorizedCertificates.
+			Patch(appID, d.Id(), input).
+			UpdateMask("name,certificateRawData.privateKey,certificateRawData.publicCertificate").
+			Do()
 		if err != nil {
 			return err
 		}
