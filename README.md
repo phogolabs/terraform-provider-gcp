@@ -8,9 +8,9 @@ Google Cloud Provider Extension
 provider "gcp" {}
 
 resource "gcp_app_engine_ssl_certificate" {
-  app_id      = "application unique identitifer"
-  name        = "my certificate"
-  private_key = ""
-  certificate = ""
+  app_id      = "<APP ENGINE ID>"
+  name        = "<DISPLAY NAME>"
+  private_key = "<PRIVATE KEY>"
+  certificate = "<CERTIFICATE>"
 }
 ```
