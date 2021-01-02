@@ -104,7 +104,7 @@ func NewAppEngineSSLCertificate() *schema.Resource {
 
 		record, err := service.Apps.AuthorizedCertificates.
 			Patch(appID, d.Id(), input).
-			UpdateMask("name,certificateRawData.privateKey,certificateRawData.publicCertificate").
+			UpdateMask("display_name,certificate_raw_data").
 			Do()
 		if err != nil {
 			return err
