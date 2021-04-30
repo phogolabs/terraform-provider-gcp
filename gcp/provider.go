@@ -1,7 +1,7 @@
 package gcp
 
 import (
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 )
 
 // NewProvider creates a new provider

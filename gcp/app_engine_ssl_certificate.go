@@ -3,7 +3,7 @@ package gcp
 import (
 	"context"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"google.golang.org/api/appengine/v1"
 )
 
